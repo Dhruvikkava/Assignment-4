@@ -1,0 +1,27 @@
+header{
+  position: fixed;top:0;left: 0;width:100%;background-color: $white;z-index: 10;padding:21px 0 23px 0;
+  .header-container{
+    max-width: 1170px;margin:0 auto;padding: 0px 15px;display: flex;justify-content: space-between;align-items: flex-start;
+    .logo{
+      width:336px;padding-top: 4px;
+    }
+    .navbar{
+      display: block;padding:0;
+      .phone-number{
+        display: flex;justify-content: flex-end;color:$green;margin-bottom:18px;
+        .call-icon{font-size: 22px;}
+        .number{font-size: 22px;padding-left: 8px;font-weight: bold;}
+      }
+      ul{
+        display: flex;align-items: center;flex-wrap: wrap;
+        li{         
+          margin:0 14px;           
+          a{font-size: 15px;font-weight: bold;text-transform: uppercase;color: $light-black1;
+            &:hover,&:focus{color:$green}
+          }
+          &:last-child{margin-right: 0;}
+        }
+      }
+    }
+  }
+}
