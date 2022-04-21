@@ -70,7 +70,7 @@
         @include bp(tablet-max){padding: 60px 0 40px 0;}
         .slider-content{
             max-width: 1190px;padding: 0 15px;margin:0 auto;
-            @include bp(tablet-max){padding: 0 30px;}
+            @include bp(xxlg-max){padding: 0 50px;}
             h2{text-align: center;margin:0 0 39px 0;font-weight: bold;color: $light-black1;
                 @include bp(md-max){font-size: 38px;}
                 @include bp(sm-max){font-size: 36px;}                @include bp(xxs-max){font-size: 34px;}
@@ -90,7 +90,8 @@
                     &.slide4{width: 340px;@include bp(tablet-max){width:auto}}
                     &.slide5{width: 159px;@include bp(tablet-max){width:auto}}                  
                     .slide-image{border:1px solid $light-gray1;height: 106px;overflow:hidden;
-                        img{object-fit: none;@include transition(all 0.4s linear);@include bp(tablet-max){object-fit: cover;}}                       
+                        @include bp(md-max){}
+                        img{object-fit: none;@include transition(all 0.4s linear);@include bp(tablet-max){object-fit: contain}}                       
                     }
                     &:hover{img{@include scale(1.1);}}
                     

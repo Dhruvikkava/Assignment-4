@@ -1,6 +1,7 @@
 header{
   position: fixed;top:0;left: 0;width:100%;background-color: $white;z-index: 10;padding:21px 0 23px 0;
   @include bp(xs-max){padding:15px 0;}
+  &.active{box-shadow: 0 0 11px 2px $light-black1;}
 
   .header-container{
     max-width: 1170px;margin:0 auto;padding: 0px 15px;display: flex;justify-content: space-between;align-items: flex-start;

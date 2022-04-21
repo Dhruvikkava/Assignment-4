@@ -1,3 +1,13 @@
+$(document).ready(function() {
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > 50) {
+         $('.header').addClass('active');
+      } else {
+         $('.header').removeClass('active');
+      }
+  });
+});
+
 $('.slider-slick').slick({
     infinite: true,
     speed: 400,
