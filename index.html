@@ -19,7 +19,7 @@
         <!-- header start  -->
         <header class="header">
             <div class="header-container">
-                <a class="logo">
+                <a class="logo" href="#">
                     <img src="public/images/logo.svg" alt="logo">
                 </a>
                 <nav class="navbar">
@@ -27,16 +27,19 @@
                         <i class="fa fa-phone call-icon" aria-hidden="true"></i>
                         <span class="number">407-233-6946</span>
                     </a>
-                    <ul>
+                    <ul>                        
                         <li><a href="#" title="About">about</a></li>
                         <li><a href="#" title="Staff">staff</a></li>
                         <li><a href="#" title="Golg Placement Service">golf placement service</a></li>
                         <li><a href="#" title="Camps">camps</a></li>
                         <li><a href="#" title="Corporate Partnership">corporate partnership</a></li>
-                        <li><a href="#" title="Contact">contact</a></li>
-                    </ul>
+                        <li><a href="#" title="Contact">contact</a></li>                        
+                    </ul>                    
                 </nav>
-            </div>
+                <i class="fa fa-bars" aria-hidden="true" onclick="document.body.classList.toggle('sidebar-toggle')"></i> 
+                <div class="overlay"  onclick="document.body.classList.toggle('sidebar-toggle')"></div> 
+                <i class="fa fa-times" aria-hidden="true" onclick="document.body.classList.toggle('sidebar-toggle')"></i>              
+            </div>            
         </header>
         <!-- header end  -->
 
@@ -71,7 +74,7 @@
                     <h2>STAFF MEMBERS</h2>
                     <div class="content">
                         <div class="row">
-                            <div class="col-md-4 grid">
+                            <div class="col-md-4 col-sm-12 grid">
                                 <div class="image-content">
                                     <div class="image-wrap">
                                         <img src="public/images/ryan.jpg" alt="member-img">
@@ -83,7 +86,7 @@
                                     <p class="text">Sed ut persplclatls unde omnls lste natus <br> error sit voluptatem accusantium doloremque</p>
                                 </div>
                             </div>
-                            <div class="col-md-4 grid">
+                            <div class="col-md-4 col-sm-12 grid">
                                 <div class="image-content">
                                     <div class="image-wrap">
                                         <img src="public/images/ted.jpg" alt="member-img">
@@ -95,7 +98,7 @@
                                     <p class="text">Sed ut persplclatls unde omnls lste natus <br> error sit voluptatem accusantium doloremque</p>
                                 </div>
                             </div>
-                            <div class="col-md-4 grid">
+                            <div class="col-md-4 col-sm-12 grid">
                                 <div class="image-content">
                                     <div class="image-wrap">
                                         <img src="public/images/jon.jpg" alt="member-img">
@@ -190,7 +193,7 @@
                     <li><a href="#" title="Corporate Partnership">Corporate Partnership</a></li>
                     <li><a href="#" title="Contact">Contact</a></li>
                 </ul>
-                <p><span>Copyright 2015 Golf Placement Services.</span><span> All Rights Reserved.</span></p>
+                <p><span class="copyright-text">Copyright 2015 Golf Placement Services.</span><span> All Rights Reserved.</span></p>
             </div>
         </div>
     </footer>

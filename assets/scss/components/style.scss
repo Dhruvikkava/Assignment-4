@@ -1,5 +1,6 @@
 *{
     font-family: $primary_fonts;
+    @include transition(all 0.4s ease-in-out);
 }
 
 // Home Page 
@@ -8,7 +9,13 @@
     // About section 
     .about{
         text-align: center;padding:70px 0 80px 0;
-        h2{font-size: 40px;font-weight: bold;color: $light-black1;margin:0 0 34px 0;}
+        @include bp(tablet-max){padding: 50px 0;}
+        h2{font-size: 40px;font-weight: bold;color: $light-black1;margin:0 0 34px 0;
+            @include bp(md-max){font-size: 38px;}
+            @include bp(sm-max){font-size: 36px;}
+            @include bp(xxs-max){font-size: 34px;margin-bottom: 20px;}
+            @include bp(xxxs-max){font-size: 30px;}
+        }
         .content{
             padding-bottom: 43px;
             p{
@@ -17,15 +24,22 @@
             }
         }
         .read-btn{border:0px;background-color: $green;color: $white;font-weight: bold;padding: 10px 26px 8px 26px;font-size: 18px;border-radius: 4px;
-            &:hover{box-shadow: 0px 0 7px 2px $light-black;}
+            @include bp(sm-max){font-size: 21px;padding: 8px 25px;}
+            &:hover{background-color:$light-black1;}
         }
     }
     // Member section 
     .members{
-        background-image: url("../images/background01.jpg");position: relative;padding:68px 0 80px 0;
+        background-image: url("../images/background01.jpg");position: relative;padding:68px 0 80px 0;background-size: cover;background-repeat: no-repeat;background-position: center;
+        @include bp(tablet-max){padding: 50px 0 60px 0;}
         .member-container{
             max-width: 1171px;margin:0 auto;padding:0 15px;
-            h2{color:$white;font-weight: bold;text-align: center;margin: 0 0 42px;}
+            h2{color:$white;font-weight: bold;text-align: center;margin: 0 0 42px;
+                @include bp(md-max){font-size: 38px;}
+                @include bp(sm-max){font-size: 36px;}   
+                @include bp(xxs-max){font-size: 34px;margin-bottom: 30px;} 
+                @include bp(xxxs-max){font-size: 30px;}
+            }
             .content{                
                 .grid{padding-bottom: 46px;
                     .image-content{
@@ -43,8 +57,9 @@
             }
             .viewbtn-wrap{
                 text-align: center;
-                .view-btn{color:$white;font-size: 18px;border:none;background-color: $green;padding: 8px 28px;border-radius: 5px;
-                    &:hover{box-shadow: 0px 0 7px 2px $white;}
+                .view-btn{color:$white;font-size: 18px;border:none;background-color: $green;padding: 8px 28px;border-radius: 5px;font-weight: bold;
+                    @include bp(sm-max){font-size: 21px;padding: 8px 25px;}
+                    &:hover{color:$green;background-color: $white;}
                 }
             }
         }
@@ -52,9 +67,15 @@
     // Partnership section 
     .partnership{
         padding:71px 0 50px 0;        
+        @include bp(tablet-max){padding: 60px 0 40px 0;}
         .slider-content{
             max-width: 1190px;padding: 0 15px;margin:0 auto;
-            h2{text-align: center;margin:0 0 39px 0;font-weight: bold;color: $light-black1;}
+            @include bp(tablet-max){padding: 0 30px;}
+            h2{text-align: center;margin:0 0 39px 0;font-weight: bold;color: $light-black1;
+                @include bp(md-max){font-size: 38px;}
+                @include bp(sm-max){font-size: 36px;}                @include bp(xxs-max){font-size: 34px;}
+                @include bp(xxxs-max){font-size: 30px;margin-bottom: 30px;}
+            }
             .slider-slick{position: relative;
                 .slick-arrow{position: absolute;top:50%;width:26px;height: 12px;z-index: 1;
                     &:hover{cursor: pointer;}
@@ -63,15 +84,16 @@
                 .next{right: -22px;@include rotateWithY(-50% ,-90deg) ;}
                 .slides{
                     padding: 0 10px;
-                    &.slide1{width: 270px;}
-                    &.slide2{width: 211px;}
-                    &.slide3{width: 180px;}
-                    &.slide4{width: 340px;}
-                    &.slide5{width: 159px;}                  
+                    &.slide1{width: 270px;@include bp(tablet-max){width:auto}}
+                    &.slide2{width: 211px;@include bp(tablet-max){width:auto}}
+                    &.slide3{width: 180px;@include bp(tablet-max){width:auto}}
+                    &.slide4{width: 340px;@include bp(tablet-max){width:auto}}
+                    &.slide5{width: 159px;@include bp(tablet-max){width:auto}}                  
                     .slide-image{border:1px solid $light-gray1;height: 106px;overflow:hidden;
-                        img{object-fit: none;@include transition(all 0.4s linear);}                       
+                        img{object-fit: none;@include transition(all 0.4s linear);@include bp(tablet-max){object-fit: cover;}}                       
                     }
                     &:hover{img{@include scale(1.1);}}
+                    
                 }
             }
         }
